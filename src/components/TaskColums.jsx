@@ -1,13 +1,14 @@
 import React from 'react';
-import Todo from '../assets/direct-hit.png';
 import './TaskColumn.css'
+import TaskCart from './TaskCart';
 
-function TaskColums(props) {
+function TaskColums({name, icon}) {
   return (
     <section className="task-column">
       <h2 className='task_column_heading'>
-        <img className='task_column_icon' src={props.icon} alt="todo-icon" />{props.name}
+        <img className='task_column_icon' src={icon} alt="todo-icon" />{name}
       </h2>
+      <TaskCart></TaskCart>
     </section>
   );
 }
